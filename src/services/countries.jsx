@@ -1,0 +1,12 @@
+import axios from 'axios'
+const baseUrl = 'https://studies.cs.helsinki.fi/restcountries/api'
+const all = '/all'
+
+const getAll = () => {
+  const request = axios.get(`${baseUrl}${all}`)
+  return request.then(response => {
+    return response.data
+  })
+}
+
+export default { getAll }
